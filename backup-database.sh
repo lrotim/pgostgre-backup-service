@@ -27,8 +27,6 @@ echo "Creating dump: $DUMP_FILE_NAME"
 BUCKET="gs://${GCB_PATH}"
 
 pg_dump > "$DUMP_FILE_NAME.sql"
-/bin/tar -cvzf "$DUMP_FILE_NAME.sql" "$DUMP_FILE_NAME.tar.gz"
+/bin/tar -cvzf "$DUMP_FILE_NAME.tar.gz" "$DUMP_FILE_NAME.sql"
 
 /root/google-cloud-sdk/bin/gsutil cp "$DUMP_FILE_NAME.tar.gz" "$BUCKET/$DUMP_FILE_NAME.tar.gz"
-
-exit 0

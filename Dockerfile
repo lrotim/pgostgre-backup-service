@@ -9,4 +9,4 @@ COPY backup-database.sh .
 
 # CMD [ "bash" ]
 
-CMD [ "./backup-databse.sh" ]
+CMD [ "./backup-database.sh" ]
