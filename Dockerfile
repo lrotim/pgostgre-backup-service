@@ -7,6 +7,6 @@ RUN curl https://sdk.cloud.google.com | bash
 
 COPY backup-database.sh .
 
-CMD [ "bash" ]
+# CMD [ "bash" ]
 
-# CMD [ "./backup-databse.sh" ]
+CMD [ "./backup-databse.sh" ]
